@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="J6p-g8-CHO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Document Picker View Controller-->
+        <scene sceneID="Q8I-MS-tKG">
+            <objects>
+                <viewController id="J6p-g8-CHO" customClass="DocumentPickerViewController" customModule="CleverNotePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hST-wJ-eYy"/>
+                        <viewControllerLayoutGuide type="bottom" id="UQD-kz-Mfv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vdh-Gp-eV6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hlx-De-7qE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="IAl-ZH-w2F" customClass="TableCell" customModule="CleverNotePicker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IAl-ZH-w2F" id="8Ov-KJ-P45">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whr-tZ-4JD">
+                                                    <rect key="frame" x="18" y="12" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Whr-tZ-4JD" firstAttribute="centerY" secondItem="8Ov-KJ-P45" secondAttribute="centerY" id="Aa8-Z7-rcV"/>
+                                                <constraint firstItem="Whr-tZ-4JD" firstAttribute="leading" secondItem="8Ov-KJ-P45" secondAttribute="leading" constant="18" id="KXa-4m-azH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblTitle" destination="Whr-tZ-4JD" id="HvZ-JW-365"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="J6p-g8-CHO" id="tKK-a2-wvY"/>
+                                    <outlet property="delegate" destination="J6p-g8-CHO" id="wcx-dT-D8x"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYO-X5-w4R">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nZ-8r-S6Q">
+                                        <rect key="frame" x="115.5" y="286.5" width="144" height="30"/>
+                                        <state key="normal" title="Export to CleverNote"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T9-ho-Mav">
+                                        <rect key="frame" x="166.5" y="84" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="4nZ-8r-S6Q" firstAttribute="centerY" secondItem="cYO-X5-w4R" secondAttribute="centerY" id="BLU-dp-V01"/>
+                                    <constraint firstItem="4T9-ho-Mav" firstAttribute="top" secondItem="cYO-X5-w4R" secondAttribute="top" constant="84" id="PMj-vN-dn7"/>
+                                    <constraint firstItem="4nZ-8r-S6Q" firstAttribute="centerX" secondItem="cYO-X5-w4R" secondAttribute="centerX" id="Z6F-Ea-IXm"/>
+                                    <constraint firstItem="4T9-ho-Mav" firstAttribute="centerX" secondItem="cYO-X5-w4R" secondAttribute="centerX" id="ggA-0k-6UL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cYO-X5-w4R" firstAttribute="top" secondItem="Vdh-Gp-eV6" secondAttribute="top" constant="64" id="EaO-ZH-0hs"/>
+                            <constraint firstAttribute="bottom" secondItem="cYO-X5-w4R" secondAttribute="bottom" id="Ghk-Vq-kRB"/>
+                            <constraint firstItem="cYO-X5-w4R" firstAttribute="leading" secondItem="Vdh-Gp-eV6" secondAttribute="leading" id="NUI-kR-BfQ"/>
+                            <constraint firstAttribute="trailing" secondItem="cYO-X5-w4R" secondAttribute="trailing" id="OHr-RW-4Mf"/>
+                            <constraint firstItem="Hlx-De-7qE" firstAttribute="leading" secondItem="Vdh-Gp-eV6" secondAttribute="leading" id="S1M-WV-5L0"/>
+                            <constraint firstItem="UQD-kz-Mfv" firstAttribute="top" secondItem="Hlx-De-7qE" secondAttribute="bottom" id="TBJ-C6-ghX"/>
+                            <constraint firstAttribute="trailing" secondItem="Hlx-De-7qE" secondAttribute="trailing" id="gvW-sk-fIT"/>
+                            <constraint firstItem="Hlx-De-7qE" firstAttribute="top" secondItem="hST-wJ-eYy" secondAttribute="bottom" id="peF-m7-vI6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confirmBtn" destination="4nZ-8r-S6Q" id="8d3-SU-LHc"/>
+                        <outlet property="confirmView" destination="cYO-X5-w4R" id="yAP-YL-ngV"/>
+                        <outlet property="tableView" destination="Hlx-De-7qE" id="Awj-8g-mc9"/>
+                        <outlet property="warningLbl" destination="4T9-ho-Mav" id="lPb-hj-GjK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UoZ-ya-W3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+</document>
